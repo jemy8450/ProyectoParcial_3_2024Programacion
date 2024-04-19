@@ -12,7 +12,7 @@ namespace CapaEntidades
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int DetalleVentaId { get; set; }
+        public int DetallesDeVentaId { get; set; }
         [Required]
         public int Cantidad { get; set; }
         [Required]
