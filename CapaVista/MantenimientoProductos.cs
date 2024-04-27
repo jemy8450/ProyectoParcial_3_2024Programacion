@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace CapaVista
 {
-    public partial class Form1 : Form
+    public partial class MantenimientoProductos : Form
     {
-        public Form1()
+        public MantenimientoProductos()
         {
             InitializeComponent();
         }
 
-        private void MnMantenimientoProductos_Click(object sender, EventArgs e)
+        private void MantenimientoProductos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gpbxFiltro_Enter(object sender, EventArgs e)
         {
 
         }
