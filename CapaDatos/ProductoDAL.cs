@@ -14,7 +14,7 @@ namespace CapaDatos
 
         public int Guardar(Producto producto, int id = 0, bool esActualizacion = false)
         {
-            _db = new ContextoBD();
+            _db = new ContextoBD(); //
 
             int resultado;
 
@@ -34,19 +34,20 @@ namespace CapaDatos
 
                 resultado = producto.ProductoId;
             }
+
             return resultado;
         }
 
         public List<Producto> Leer()
         {
-            _db = new ContextoBD();
+            _db = new ContextoBD(); //
 
             return _db.Productos.Where(p => p.Estado == true).ToList();
         }
 
         public Producto LeerPorId(int id)
         {
-            _db = new ContextoBD();
+            _db = new ContextoBD(); //
 
             return _db.Productos.Find();
         }

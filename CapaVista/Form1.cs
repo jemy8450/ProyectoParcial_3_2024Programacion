@@ -19,7 +19,8 @@ namespace CapaVista
 
         private void MnMantenimientoProductos_Click(object sender, EventArgs e)
         {
-
+            MantenimientoProductos objMantenimientoProductos = new MantenimientoProductos();
+            objMantenimientoProductos.ShowDialog();
         }
     }
 }
