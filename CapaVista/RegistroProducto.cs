@@ -43,7 +43,7 @@ namespace CapaVista
                 //throw new Exception();
                 if (String.IsNullOrEmpty(txtNombre.Text))
                 {
-                    MessageBox.Show("Se requiere el nombre del producto","Tienda | Registro Productos",
+                    MessageBox.Show("Se requiere el nombre del producto", "Tienda | Registro Productos",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtNombre.Focus();
                     txtNombre.BackColor = Color.LightCyan;
@@ -52,7 +52,7 @@ namespace CapaVista
 
                 if (String.IsNullOrEmpty(txtDescripción.Text))
                 {
-                    MessageBox.Show("Se requiere la descripción del producto","Tienda | Registro Productos",
+                    MessageBox.Show("Se requiere la descripción del producto", "Tienda | Registro Productos",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtDescripción.Focus();
                     txtDescripción.BackColor = Color.LightCyan;
@@ -61,7 +61,7 @@ namespace CapaVista
 
                 if (String.IsNullOrEmpty(txtPrecio.Text) || Convert.ToDecimal(txtPrecio.Text) == 0)
                 {
-                    MessageBox.Show("Se requiere el precio del producto","Tienda | Registro Productos",
+                    MessageBox.Show("Se requiere el precio del producto", "Tienda | Registro Productos",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtPrecio.Focus();
                     txtPrecio.BackColor = Color.LightCyan;
@@ -70,7 +70,7 @@ namespace CapaVista
 
                 if (String.IsNullOrEmpty(txtExistencias.Text) || Convert.ToDecimal(txtExistencias.Text) == 0)
                 {
-                    MessageBox.Show("Se requiere agregar existencias del producto","Tienda | Registro Productos",
+                    MessageBox.Show("Se requiere agregar existencias del producto", "Tienda | Registro Productos",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     //txtExistencias.Focus();
                     //txtExistencias.BackColor = Color.LightCyan;
@@ -79,12 +79,12 @@ namespace CapaVista
 
                 if (!chkEstado.Checked)
                 {
-                    var dialogo = MessageBox.Show("¿Esta seguro que desa guardar el producto inactivo?","Tienda | Registro Productos",
+                    var dialogo = MessageBox.Show("¿Esta seguro que desa guardar el producto inactivo?", "Tienda | Registro Productos",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                     if (dialogo != DialogResult.Yes)
                     {
-                        MessageBox.Show("Seleccione el cuadro Estado como activo","Tienda | Registro Productos",
+                        MessageBox.Show("Seleccione el cuadro Estado como activo", "Tienda | Registro Productos",
                        MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
@@ -98,14 +98,14 @@ namespace CapaVista
 
                 if (resultado > 0)
                 {
-                    MessageBox.Show("Producto agregado con exito","Tienda | Registro Productos",
+                    MessageBox.Show("Producto agregado con exito", "Tienda | Registro Productos",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("No se logro guardar el producto","Tienda | Registro Productos",
+                    MessageBox.Show("No se logro guardar el producto", "Tienda | Registro Productos",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
@@ -115,9 +115,11 @@ namespace CapaVista
             catch (Exception)
             {
 
-                MessageBox.Show("Ocurrio un error","Tienda | Registro Productos",
+                MessageBox.Show("Ocurrio un error", "Tienda | Registro Productos",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
             }
+
         }
     }
 }

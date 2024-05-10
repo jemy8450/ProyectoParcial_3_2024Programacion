@@ -35,13 +35,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.chkEstado = new System.Windows.Forms.CheckBox();
+            this.ProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtExistencias = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtDescripción = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.ProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ProductoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +50,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(37, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 24);
+            this.label1.Size = new System.Drawing.Size(115, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre Poducto:";
             // 
@@ -59,7 +59,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(78, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 24);
+            this.label2.Size = new System.Drawing.Size(84, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Descripción:";
             // 
@@ -68,7 +68,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(116, 219);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 24);
+            this.label3.Size = new System.Drawing.Size(52, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Precio:";
             // 
@@ -77,7 +77,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(80, 270);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 24);
+            this.label4.Size = new System.Drawing.Size(81, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Existencias:";
             // 
@@ -86,7 +86,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(110, 324);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 24);
+            this.label5.Size = new System.Drawing.Size(55, 20);
             this.label5.TabIndex = 4;
             this.label5.Text = "Estado:";
             // 
@@ -96,17 +96,21 @@
             this.chkEstado.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.ProductoBindingSource, "Estado", true));
             this.chkEstado.Location = new System.Drawing.Point(182, 323);
             this.chkEstado.Name = "chkEstado";
-            this.chkEstado.Size = new System.Drawing.Size(77, 28);
+            this.chkEstado.Size = new System.Drawing.Size(65, 24);
             this.chkEstado.TabIndex = 14;
             this.chkEstado.Text = "Activo";
             this.chkEstado.UseVisualStyleBackColor = true;
+            // 
+            // ProductoBindingSource
+            // 
+            this.ProductoBindingSource.DataSource = typeof(CapaEntidades.Producto);
             // 
             // txtExistencias
             // 
             this.txtExistencias.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Existencias", true));
             this.txtExistencias.Location = new System.Drawing.Point(182, 267);
             this.txtExistencias.Name = "txtExistencias";
-            this.txtExistencias.Size = new System.Drawing.Size(190, 30);
+            this.txtExistencias.Size = new System.Drawing.Size(190, 26);
             this.txtExistencias.TabIndex = 13;
             // 
             // txtPrecio
@@ -114,7 +118,7 @@
             this.txtPrecio.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Precio", true));
             this.txtPrecio.Location = new System.Drawing.Point(182, 213);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(190, 30);
+            this.txtPrecio.Size = new System.Drawing.Size(190, 26);
             this.txtPrecio.TabIndex = 12;
             // 
             // txtDescripción
@@ -131,7 +135,7 @@
             this.txtNombre.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Nombre", true));
             this.txtNombre.Location = new System.Drawing.Point(182, 12);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(501, 30);
+            this.txtNombre.Size = new System.Drawing.Size(501, 26);
             this.txtNombre.TabIndex = 10;
             // 
             // btnCancelar
@@ -154,13 +158,9 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // ProductoBindingSource
-            // 
-            this.ProductoBindingSource.DataSource = typeof(CapaEntidades.Producto);
-            // 
             // RegistroProducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(798, 452);
             this.Controls.Add(this.btnCancelar);
