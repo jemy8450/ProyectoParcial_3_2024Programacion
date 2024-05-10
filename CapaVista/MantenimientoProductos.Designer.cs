@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gpbxFiltro = new System.Windows.Forms.GroupBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -38,6 +42,8 @@
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Existencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +51,7 @@
             // 
             this.gpbxFiltro.Location = new System.Drawing.Point(12, 25);
             this.gpbxFiltro.Name = "gpbxFiltro";
-            this.gpbxFiltro.Size = new System.Drawing.Size(714, 100);
+            this.gpbxFiltro.Size = new System.Drawing.Size(982, 100);
             this.gpbxFiltro.TabIndex = 0;
             this.gpbxFiltro.TabStop = false;
             this.gpbxFiltro.Text = "Filtros por Producto";
@@ -62,7 +68,9 @@
             this.Descripción,
             this.Precio,
             this.Existencias,
-            this.Estado});
+            this.Estado,
+            this.Editar,
+            this.Eliminar});
             this.dgvProductos.Location = new System.Drawing.Point(12, 164);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
@@ -70,6 +78,7 @@
             this.dgvProductos.RowTemplate.Height = 24;
             this.dgvProductos.Size = new System.Drawing.Size(982, 407);
             this.dgvProductos.TabIndex = 1;
+            this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
             // 
             // btnNuevo
             // 
@@ -94,11 +103,13 @@
             // ProductoId
             // 
             this.ProductoId.DataPropertyName = "ProductoId";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductoId.DefaultCellStyle = dataGridViewCellStyle1;
             this.ProductoId.HeaderText = "Código";
             this.ProductoId.MinimumWidth = 6;
             this.ProductoId.Name = "ProductoId";
             this.ProductoId.ReadOnly = true;
-            this.ProductoId.Width = 75;
             // 
             // Nombre
             // 
@@ -107,7 +118,7 @@
             this.Nombre.MinimumWidth = 6;
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 175;
+            this.Nombre.Width = 300;
             // 
             // Descripción
             // 
@@ -116,11 +127,14 @@
             this.Descripción.MinimumWidth = 6;
             this.Descripción.Name = "Descripción";
             this.Descripción.ReadOnly = true;
+            this.Descripción.Visible = false;
             this.Descripción.Width = 350;
             // 
             // Precio
             // 
             this.Precio.DataPropertyName = "Precio";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Precio.DefaultCellStyle = dataGridViewCellStyle2;
             this.Precio.HeaderText = "Precio U";
             this.Precio.MinimumWidth = 6;
             this.Precio.Name = "Precio";
@@ -130,6 +144,8 @@
             // Existencias
             // 
             this.Existencias.DataPropertyName = "Existencias";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Existencias.DefaultCellStyle = dataGridViewCellStyle3;
             this.Existencias.HeaderText = "Existencias";
             this.Existencias.MinimumWidth = 6;
             this.Existencias.Name = "Existencias";
@@ -139,6 +155,8 @@
             // Estado
             // 
             this.Estado.DataPropertyName = "Estado";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Estado.DefaultCellStyle = dataGridViewCellStyle4;
             this.Estado.HeaderText = "Estado";
             this.Estado.MinimumWidth = 6;
             this.Estado.Name = "Estado";
@@ -146,9 +164,24 @@
             this.Estado.Visible = false;
             this.Estado.Width = 125;
             // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Image = global::CapaVista.Properties.Resources.edit_v2;
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Image = global::CapaVista.Properties.Resources.delete;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            // 
             // MantenimientoProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1006, 673);
             this.Controls.Add(this.btnVolver);
@@ -178,5 +211,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Existencias;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridViewImageColumn Editar;
+        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
     }
 }

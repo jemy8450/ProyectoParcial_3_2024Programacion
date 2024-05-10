@@ -11,7 +11,6 @@ namespace CapaDatos
     {
         ContextoBD _db;
 
-
         public int Guardar(Producto producto, int id = 0, bool esActualizacion = false)
         {
             _db = new ContextoBD(); //
@@ -49,7 +48,7 @@ namespace CapaDatos
         {
             _db = new ContextoBD(); //
 
-            return _db.Productos.Find();
+            return _db.Productos.Find(id);
         }
     }
 }
