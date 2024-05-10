@@ -11,6 +11,24 @@ namespace CapaDatos
     {
         ContextoBD _db;
 
+        public int Eliminar(int id)
+        {
+            _db = new ContextoBD();
+            int resultado = 0;
+
+            var producto = _db.Productos.Find(id);
+
+            if (producto != null)
+            {
+                producto.Estado = false;
+                _db.SaveChanges();
+
+                resultado = producto.ProductoId;
+            }
+
+            return resultado;
+        }
+
         public int Guardar(Producto producto, int id = 0, bool esActualizacion = false)
         {
             _db = new ContextoBD(); //
@@ -37,11 +55,19 @@ namespace CapaDatos
             return resultado;
         }
 
-        public List<Producto> Leer()
+        public List<Producto> Leer(bool inactivos = false)
         {
             _db = new ContextoBD(); //
 
-            return _db.Productos.Where(p => p.Estado == true).ToList();
+
+            if (inactivos)
+            {
+                return _db.Productos.Where(p => p.Estado == false).ToList();
+            }
+            else
+            {
+                return _db.Productos.Where(p => p.Estado == true).ToList();
+            }
         }
 
         public Producto LeerPorId(int id)

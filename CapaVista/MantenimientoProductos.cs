@@ -28,11 +28,6 @@ namespace CapaVista
 
         }
 
-        private void gpbxFiltro_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         ////////////////////////////////////////////////
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -45,7 +40,17 @@ namespace CapaVista
         {
             _productoLOG = new ProductoLOG();
 
-            dgvProductos.DataSource = _productoLOG.ObtenerProductos();
+            if (rdbActivos.Checked)
+            {
+                dgvProductos.DataSource = _productoLOG.ObtenerProductos();
+
+            }
+            else if (rdbInactivos.Checked)
+            {
+                dgvProductos.DataSource = _productoLOG.ObtenerProductos(true);
+
+            }
+
         }
 
         ////////////////////////////////////////////////
@@ -62,11 +67,42 @@ namespace CapaVista
                 {
                     int id = int.Parse(dgvProductos.Rows[e.RowIndex].Cells["ProductoId"].Value.ToString());
 
-                    if (dgvProductos.Columns[e.ColumnIndex].Name.Equals("Editar")); // Equals compara Strings
+                    if (dgvProductos.Columns[e.ColumnIndex].Name.Equals("Editar")) // Equals compara Strings
                     {
                         RegistroProducto objRegistroProducto = new RegistroProducto(id);
                         objRegistroProducto.ShowDialog();
                         CargarProductos();
+                    }
+                    else if (dgvProductos.Columns[e.ColumnIndex].Name.Equals("Eliminar"))
+                    {
+                        var dialogo = MessageBox.Show("¿Esta seguro que desea eliminar el producto?", "Tienda | Eliminar Producto",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                        if (dialogo != DialogResult.Yes)
+                        {
+                            MessageBox.Show("Operacion cancelada", "Tienda | Eliminar Producto",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }
+                        else
+                        {
+                            _productoLOG = new ProductoLOG();
+
+                            int resultado = _productoLOG.EliminarProducto(id);
+
+                            if (resultado > 0)
+                            {
+                                MessageBox.Show("Producto eliminado con exito", "Tienda | Eliminar Producto",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                CargarProductos();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se logro eliminar el producto", "Tienda | Eliminar Producto",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
                     }
                 }
             }
@@ -74,6 +110,21 @@ namespace CapaVista
             {
                 MessageBox.Show("Ocurrio un error");
             }
+        }
+
+        private void gpbxFiltro_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdbActivos_CheckedChanged(object sender, EventArgs e)
+        {
+            CargarProductos();
+        }
+
+        private void rdbInactivos_CheckedChanged(object sender, EventArgs e)
+        {
+            CargarProductos();
         }
     }
 }

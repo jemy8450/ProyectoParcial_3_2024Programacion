@@ -108,7 +108,7 @@ namespace CapaVista
                 //// Estado
                 if (!chkEstado.Checked)
                 {
-                    var dialogo = MessageBox.Show("¿Esta seguro que desa guardar el producto inactivo?", "Tienda | Registro Productos",
+                    var dialogo = MessageBox.Show("¿Esta seguro que desea guardar el producto inactivo?", "Tienda | Registro Productos",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                     if (dialogo != DialogResult.Yes)
