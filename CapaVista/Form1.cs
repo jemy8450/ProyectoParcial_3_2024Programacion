@@ -22,5 +22,11 @@ namespace CapaVista
             MantenimientoProductos objMantenimientoProductos = new MantenimientoProductos();
             objMantenimientoProductos.ShowDialog();
         }
+
+        private void MnRegistroVentas_Click(object sender, EventArgs e)
+        {
+            RegistroVenta objRegistroVenta = new RegistroVenta();
+            objRegistroVenta.ShowDialog();
+        }
     }
 }

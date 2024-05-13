@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnRegistroVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MnMantenimientoProductos = new System.Windows.Forms.ToolStripMenuItem();
-            this.MnRegistroVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,13 @@
             this.ventasToolStripMenuItem.Size = new System.Drawing.Size(83, 31);
             this.ventasToolStripMenuItem.Text = "Ventas";
             // 
+            // MnRegistroVentas
+            // 
+            this.MnRegistroVentas.Name = "MnRegistroVentas";
+            this.MnRegistroVentas.Size = new System.Drawing.Size(253, 32);
+            this.MnRegistroVentas.Text = "Registro de Ventas";
+            this.MnRegistroVentas.Click += new System.EventHandler(this.MnRegistroVentas_Click);
+            // 
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -73,12 +81,6 @@
             this.MnMantenimientoProductos.Text = "Mantenimiento de Productos";
             this.MnMantenimientoProductos.Click += new System.EventHandler(this.MnMantenimientoProductos_Click);
             // 
-            // MnRegistroVentas
-            // 
-            this.MnRegistroVentas.Name = "MnRegistroVentas";
-            this.MnRegistroVentas.Size = new System.Drawing.Size(253, 32);
-            this.MnRegistroVentas.Text = "Registro de Ventas";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 22F);
@@ -86,6 +88,7 @@
             this.ClientSize = new System.Drawing.Size(1006, 673);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
