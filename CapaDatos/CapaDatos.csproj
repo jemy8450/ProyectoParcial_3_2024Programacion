@@ -59,9 +59,14 @@
     <Compile Include="Migrations\202404190232214_Prueba1.Designer.cs">
       <DependentUpon>202404190232214_Prueba1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202405150020323_Arreglos.cs" />
+    <Compile Include="Migrations\202405150020323_Arreglos.designer.cs">
+      <DependentUpon>202405150020323_Arreglos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ProductoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VentaDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -76,6 +81,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202404190232214_Prueba1.resx">
       <DependentUpon>202404190232214_Prueba1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405150020323_Arreglos.resx">
+      <DependentUpon>202405150020323_Arreglos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
