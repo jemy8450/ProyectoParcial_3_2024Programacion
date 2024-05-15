@@ -12,10 +12,24 @@ namespace CapaLogica
     {
         VentaDAL _ventaDAL;
 
+        public int EliminarProducto(int id)
+        {
+            _ventaDAL = new VentaDAL();
+
+            return _ventaDAL.Eliminar(id);
+        }
+
         public int GuardarVenta(Venta venta, int id = 0, bool esActualizacion = false)
         {
             _ventaDAL = new VentaDAL(); 
             return _ventaDAL.Guardar(venta, id, esActualizacion);
         }
+
+        //public object ObtenerProductos()
+        //{
+        //    _ventaDAL = new VentaDAL();
+
+        //    return _ventaDAL.Leer();
+        //}
     }
 }

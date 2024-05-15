@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbxFiltro = new System.Windows.Forms.GroupBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.ProductoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,8 +45,8 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.gbxEstado = new System.Windows.Forms.GroupBox();
-            this.rdbActivos = new System.Windows.Forms.RadioButton();
             this.rdbInactivos = new System.Windows.Forms.RadioButton();
+            this.rdbActivos = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.gbxEstado.SuspendLayout();
             this.SuspendLayout();
@@ -86,9 +86,9 @@
             // ProductoId
             // 
             this.ProductoId.DataPropertyName = "ProductoId";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductoId.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductoId.DefaultCellStyle = dataGridViewCellStyle1;
             this.ProductoId.HeaderText = "Código";
             this.ProductoId.MinimumWidth = 6;
             this.ProductoId.Name = "ProductoId";
@@ -116,8 +116,8 @@
             // Precio
             // 
             this.Precio.DataPropertyName = "Precio";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Precio.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Precio.DefaultCellStyle = dataGridViewCellStyle2;
             this.Precio.HeaderText = "Precio U";
             this.Precio.MinimumWidth = 6;
             this.Precio.Name = "Precio";
@@ -127,8 +127,8 @@
             // Existencias
             // 
             this.Existencias.DataPropertyName = "Existencias";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Existencias.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Existencias.DefaultCellStyle = dataGridViewCellStyle3;
             this.Existencias.HeaderText = "Existencias";
             this.Existencias.MinimumWidth = 6;
             this.Existencias.Name = "Existencias";
@@ -138,8 +138,8 @@
             // Estado
             // 
             this.Estado.DataPropertyName = "Estado";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.Estado.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Estado.DefaultCellStyle = dataGridViewCellStyle4;
             this.Estado.HeaderText = "Estado";
             this.Estado.MinimumWidth = 6;
             this.Estado.Name = "Estado";
@@ -193,6 +193,17 @@
             this.gbxEstado.TabStop = false;
             this.gbxEstado.Text = "Filtro por Estado";
             // 
+            // rdbInactivos
+            // 
+            this.rdbInactivos.AutoSize = true;
+            this.rdbInactivos.Location = new System.Drawing.Point(152, 47);
+            this.rdbInactivos.Name = "rdbInactivos";
+            this.rdbInactivos.Size = new System.Drawing.Size(79, 24);
+            this.rdbInactivos.TabIndex = 1;
+            this.rdbInactivos.Text = "Inactivos";
+            this.rdbInactivos.UseVisualStyleBackColor = true;
+            this.rdbInactivos.CheckedChanged += new System.EventHandler(this.rdbInactivos_CheckedChanged);
+            // 
             // rdbActivos
             // 
             this.rdbActivos.AutoSize = true;
@@ -205,17 +216,6 @@
             this.rdbActivos.Text = "Activos";
             this.rdbActivos.UseVisualStyleBackColor = true;
             this.rdbActivos.CheckedChanged += new System.EventHandler(this.rdbActivos_CheckedChanged);
-            // 
-            // rdbInactivos
-            // 
-            this.rdbInactivos.AutoSize = true;
-            this.rdbInactivos.Location = new System.Drawing.Point(152, 47);
-            this.rdbInactivos.Name = "rdbInactivos";
-            this.rdbInactivos.Size = new System.Drawing.Size(79, 24);
-            this.rdbInactivos.TabIndex = 1;
-            this.rdbInactivos.Text = "Inactivos";
-            this.rdbInactivos.UseVisualStyleBackColor = true;
-            this.rdbInactivos.CheckedChanged += new System.EventHandler(this.rdbInactivos_CheckedChanged);
             // 
             // MantenimientoProductos
             // 
