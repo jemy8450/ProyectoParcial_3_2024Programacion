@@ -115,7 +115,7 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "Precio", true));
+            this.txtPrecio.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ProductoBindingSource, "PrecioUnitario", true));
             this.txtPrecio.Location = new System.Drawing.Point(182, 213);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(190, 26);

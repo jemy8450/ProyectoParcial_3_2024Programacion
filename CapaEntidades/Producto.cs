@@ -19,7 +19,7 @@ namespace CapaEntidades
         [MaxLength(250)]
         public string Descripcion { get; set; }
         [Required]
-        public decimal Precio { get; set; }
+        public decimal PrecioUnitario { get; set; }
         [Required]
         public int Existencias { get; set; }
         [Required]

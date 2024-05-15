@@ -13,7 +13,7 @@
                     {
                         DetallesDeVentaId = c.Int(nullable: false, identity: true),
                         Cantidad = c.Int(nullable: false),
-                        Precio = c.Int(nullable: false),
+                        Precio = c.Decimal(nullable: false, precision: 18, scale: 2),
                         ProductoId = c.Int(nullable: false),
                         VentaId = c.Int(nullable: false),
                     })
@@ -30,7 +30,7 @@
                         ProductoId = c.Int(nullable: false, identity: true),
                         Nombre = c.String(nullable: false, maxLength: 150),
                         Descripcion = c.String(maxLength: 250),
-                        Precio = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        PrecioUnitario = c.Decimal(nullable: false, precision: 18, scale: 2),
                         Existencias = c.Int(nullable: false),
                         Estado = c.Boolean(nullable: false),
                     })

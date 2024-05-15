@@ -33,6 +33,8 @@
             this.MnRegistroVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MnMantenimientoProductos = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnRegistroTransacciones = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +44,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ventasToolStripMenuItem,
-            this.productosToolStripMenuItem});
+            this.productosToolStripMenuItem,
+            this.registrosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
@@ -80,6 +83,21 @@
             this.MnMantenimientoProductos.Text = "Mantenimiento de Productos";
             this.MnMantenimientoProductos.Click += new System.EventHandler(this.MnMantenimientoProductos_Click);
             // 
+            // registrosToolStripMenuItem
+            // 
+            this.registrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MnRegistroTransacciones});
+            this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
+            this.registrosToolStripMenuItem.Size = new System.Drawing.Size(87, 27);
+            this.registrosToolStripMenuItem.Text = "Registros";
+            // 
+            // MnRegistroTransacciones
+            // 
+            this.MnRegistroTransacciones.Name = "MnRegistroTransacciones";
+            this.MnRegistroTransacciones.Size = new System.Drawing.Size(266, 28);
+            this.MnRegistroTransacciones.Text = "Registro de Transacciones";
+            this.MnRegistroTransacciones.Click += new System.EventHandler(this.MnRegistroTransacciones_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -106,6 +124,8 @@
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MnRegistroVentas;
         private System.Windows.Forms.ToolStripMenuItem MnMantenimientoProductos;
+        private System.Windows.Forms.ToolStripMenuItem registrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MnRegistroTransacciones;
     }
 }
 

@@ -85,8 +85,8 @@ namespace CapaVista
 
                 if (producto != null)
                 {
-                    detalleVenta.Rows.Add(codigo, producto.Nombre, producto.Precio,
-                        cantidad, (cantidad * producto.Precio));
+                    detalleVenta.Rows.Add(codigo, producto.Nombre, producto.PrecioUnitario,
+                        cantidad, (cantidad * producto.PrecioUnitario));
 
                     dgvDetalleVenta.DataSource = detalleVenta;
                 }
