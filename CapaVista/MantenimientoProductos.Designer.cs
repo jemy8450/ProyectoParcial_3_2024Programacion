@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoProductos));
             this.gbxFiltro = new System.Windows.Forms.GroupBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.ProductoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,6 +94,7 @@
             this.ProductoId.MinimumWidth = 6;
             this.ProductoId.Name = "ProductoId";
             this.ProductoId.ReadOnly = true;
+            this.ProductoId.Width = 125;
             // 
             // Nombre
             // 
@@ -151,16 +153,20 @@
             // 
             this.Editar.HeaderText = "Editar";
             this.Editar.Image = global::CapaVista.Properties.Resources.edit_v2;
+            this.Editar.MinimumWidth = 6;
             this.Editar.Name = "Editar";
             this.Editar.ReadOnly = true;
             this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Editar.Width = 125;
             // 
             // Eliminar
             // 
             this.Eliminar.HeaderText = "Eliminar";
             this.Eliminar.Image = global::CapaVista.Properties.Resources.delete;
+            this.Eliminar.MinimumWidth = 6;
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.ReadOnly = true;
+            this.Eliminar.Width = 125;
             // 
             // btnNuevo
             // 
@@ -198,7 +204,7 @@
             this.rdbInactivos.AutoSize = true;
             this.rdbInactivos.Location = new System.Drawing.Point(152, 47);
             this.rdbInactivos.Name = "rdbInactivos";
-            this.rdbInactivos.Size = new System.Drawing.Size(79, 24);
+            this.rdbInactivos.Size = new System.Drawing.Size(96, 28);
             this.rdbInactivos.TabIndex = 1;
             this.rdbInactivos.Text = "Inactivos";
             this.rdbInactivos.UseVisualStyleBackColor = true;
@@ -210,7 +216,7 @@
             this.rdbActivos.Checked = true;
             this.rdbActivos.Location = new System.Drawing.Point(23, 47);
             this.rdbActivos.Name = "rdbActivos";
-            this.rdbActivos.Size = new System.Drawing.Size(71, 24);
+            this.rdbActivos.Size = new System.Drawing.Size(84, 28);
             this.rdbActivos.TabIndex = 0;
             this.rdbActivos.TabStop = true;
             this.rdbActivos.Text = "Activos";
@@ -219,7 +225,7 @@
             // 
             // MantenimientoProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1006, 673);
             this.Controls.Add(this.gbxEstado);
@@ -228,6 +234,7 @@
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.gbxFiltro);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MantenimientoProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

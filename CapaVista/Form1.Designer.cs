@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MnRegistroVentas = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +47,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1006, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1006, 37);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -55,13 +56,13 @@
             this.ventasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MnRegistroVentas});
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(71, 27);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(83, 31);
             this.ventasToolStripMenuItem.Text = "Ventas";
             // 
             // MnRegistroVentas
             // 
             this.MnRegistroVentas.Name = "MnRegistroVentas";
-            this.MnRegistroVentas.Size = new System.Drawing.Size(212, 28);
+            this.MnRegistroVentas.Size = new System.Drawing.Size(253, 32);
             this.MnRegistroVentas.Text = "Registro de Ventas";
             this.MnRegistroVentas.Click += new System.EventHandler(this.MnRegistroVentas_Click);
             // 
@@ -70,23 +71,24 @@
             this.productosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MnMantenimientoProductos});
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(92, 27);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(108, 31);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // MnMantenimientoProductos
             // 
             this.MnMantenimientoProductos.Name = "MnMantenimientoProductos";
-            this.MnMantenimientoProductos.Size = new System.Drawing.Size(277, 28);
+            this.MnMantenimientoProductos.Size = new System.Drawing.Size(331, 32);
             this.MnMantenimientoProductos.Text = "Mantenimiento de Productos";
             this.MnMantenimientoProductos.Click += new System.EventHandler(this.MnMantenimientoProductos_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1006, 673);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
