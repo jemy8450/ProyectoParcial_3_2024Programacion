@@ -83,20 +83,8 @@ namespace CapaVista
                     dgvDetalleVenta.DataSource = detalleVenta;
                 }
 
-                decimal montoTotal = 0;
-
-                foreach (DataGridViewRow row in dgvDetalleVenta.Rows)
-                {
-                    montoTotal += decimal.Parse(row.Cells["SubTotal"].Value.ToString());
+                CalcularMontoTotal();
                 }
-
-                //foreach (DataRow row in detalleVenta.Rows)
-                //{
-                //    montoTotal += (int)row["Subtotal"];
-                //}
-
-                txtMonto.Text = montoTotal.ToString();
-            }
             catch (Exception)
             {
                 MessageBox.Show("Ocurrio un error", "UNAB|Chalatenango",
