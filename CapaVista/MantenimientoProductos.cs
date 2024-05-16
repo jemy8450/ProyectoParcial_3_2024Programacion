@@ -200,9 +200,9 @@ namespace CapaVista
                         }
 
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Eror de filtrado", "Tienda | Registro Productos",
+                        MessageBox.Show($"Error de filtrado: {ex.Message}", "Tienda | Registro Productos",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                         txtFiltroCodigo.Text = "";
                     }
@@ -222,9 +222,51 @@ namespace CapaVista
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////
-        private void txtFiltroNombre_TextChanged(object sender, EventArgs e)
+
+        private void txtFiltroNombre_TextChanged_1(object sender, EventArgs e)
         {
-            
+            FiltroPorNombre(txtFiltroNombre.Text);
+        }
+
+        private void FiltroPorNombre(string nombre)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(nombre))
+                {
+                    CargarProductos();
+                }
+                else
+                {
+                    _productoLOG = new ProductoLOG();
+                    List<Producto> FiltroNombre = _productoLOG.ObtenerProductos().Where(p => p.Nombre.Contains(nombre)).ToList();
+                    dgvProductos.DataSource = FiltroNombre;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error de filtrado: {ex.Message}", "Tienda | Registro Productos",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////
+        private void txtFiltroNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txtFiltroNombre.Text == "Hola")
+            {
+                MessageBox.Show("Desbloqueaste un enigma :)");
+            }
+            if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+
         }
     }
 }

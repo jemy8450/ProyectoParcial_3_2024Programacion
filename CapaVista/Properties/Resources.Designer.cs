@@ -113,6 +113,16 @@ namespace CapaVista.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Happy_Soft_Fee {
+            get {
+                object obj = ResourceManager.GetObject("Happy-Soft-Fee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shoe_store_with_new_collection_men_or_women_various_models_or_colors_of_sneakers_and_high_heels_in_flat_cartoon_hand_drawn_templates_illustration_vector {
             get {
                 object obj = ResourceManager.GetObject("shoe-store-with-new-collection-men-or-women-various-models-or-colors-of-sneakers-" +

@@ -34,6 +34,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoProductos));
             this.gbxFiltro = new System.Windows.Forms.GroupBox();
+            this.txtFiltroNombre = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtFiltroCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
@@ -59,6 +61,9 @@
             // 
             // gbxFiltro
             // 
+            this.gbxFiltro.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.gbxFiltro.Controls.Add(this.txtFiltroNombre);
+            this.gbxFiltro.Controls.Add(this.label2);
             this.gbxFiltro.Controls.Add(this.txtFiltroCodigo);
             this.gbxFiltro.Controls.Add(this.label1);
             this.gbxFiltro.Location = new System.Drawing.Point(12, 24);
@@ -68,11 +73,29 @@
             this.gbxFiltro.TabStop = false;
             this.gbxFiltro.Text = "Filtros por Producto";
             // 
+            // txtFiltroNombre
+            // 
+            this.txtFiltroNombre.Location = new System.Drawing.Point(367, 45);
+            this.txtFiltroNombre.Name = "txtFiltroNombre";
+            this.txtFiltroNombre.Size = new System.Drawing.Size(253, 26);
+            this.txtFiltroNombre.TabIndex = 3;
+            this.txtFiltroNombre.TextChanged += new System.EventHandler(this.txtFiltroNombre_TextChanged_1);
+            this.txtFiltroNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltroNombre_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(300, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Nombre:";
+            // 
             // txtFiltroCodigo
             // 
             this.txtFiltroCodigo.Location = new System.Drawing.Point(79, 44);
             this.txtFiltroCodigo.Name = "txtFiltroCodigo";
-            this.txtFiltroCodigo.Size = new System.Drawing.Size(191, 30);
+            this.txtFiltroCodigo.Size = new System.Drawing.Size(125, 26);
             this.txtFiltroCodigo.TabIndex = 1;
             this.txtFiltroCodigo.TextChanged += new System.EventHandler(this.txtFiltroCodigo_TextChanged);
             this.txtFiltroCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltroCodigo_KeyPress);
@@ -82,7 +105,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(16, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 24);
+            this.label1.Size = new System.Drawing.Size(57, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo:";
             // 
@@ -111,12 +134,13 @@
             // 
             // btnNuevo
             // 
+            this.btnNuevo.BackColor = System.Drawing.Color.DarkCyan;
             this.btnNuevo.Location = new System.Drawing.Point(12, 601);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(96, 40);
             this.btnNuevo.TabIndex = 2;
             this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnVolver
@@ -131,6 +155,7 @@
             // 
             // gbxEstado
             // 
+            this.gbxEstado.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.gbxEstado.Controls.Add(this.rdbInactivos);
             this.gbxEstado.Controls.Add(this.rdbActivos);
             this.gbxEstado.Location = new System.Drawing.Point(678, 24);
@@ -145,7 +170,7 @@
             this.rdbInactivos.AutoSize = true;
             this.rdbInactivos.Location = new System.Drawing.Point(153, 47);
             this.rdbInactivos.Name = "rdbInactivos";
-            this.rdbInactivos.Size = new System.Drawing.Size(96, 28);
+            this.rdbInactivos.Size = new System.Drawing.Size(79, 24);
             this.rdbInactivos.TabIndex = 1;
             this.rdbInactivos.Text = "Inactivos";
             this.rdbInactivos.UseVisualStyleBackColor = true;
@@ -157,7 +182,7 @@
             this.rdbActivos.Checked = true;
             this.rdbActivos.Location = new System.Drawing.Point(23, 47);
             this.rdbActivos.Name = "rdbActivos";
-            this.rdbActivos.Size = new System.Drawing.Size(84, 28);
+            this.rdbActivos.Size = new System.Drawing.Size(71, 24);
             this.rdbActivos.TabIndex = 0;
             this.rdbActivos.TabStop = true;
             this.rdbActivos.Text = "Activos";
@@ -219,7 +244,7 @@
             this.Precio.DataPropertyName = "PrecioUnitario";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.Precio.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Precio.HeaderText = "Precio U";
+            this.Precio.HeaderText = "Precio Unitario";
             this.Precio.MinimumWidth = 6;
             this.Precio.Name = "Precio";
             this.Precio.ReadOnly = true;
@@ -272,7 +297,7 @@
             // 
             // MantenimientoProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1006, 673);
             this.Controls.Add(this.gbxEstado);
@@ -309,6 +334,8 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.TextBox txtFiltroCodigo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtFiltroNombre;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductoId;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripción;
