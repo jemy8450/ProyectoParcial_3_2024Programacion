@@ -1,4 +1,5 @@
-﻿using CapaLogica;
+﻿using CapaEntidades;
+using CapaLogica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,7 +41,19 @@ namespace CapaVista
         {
             _productoLOG = new ProductoLOG();
 
-            if (rdbActivos.Checked)
+            // Cambios
+            if (rdbActivos.Checked && txtFiltroCodigo.Text != "")
+            {
+                dgvProductos.DataSource = _productoLOG.ObtenerProductos();
+
+            }
+            else if (rdbInactivos.Checked && txtFiltroCodigo.Text != "")
+            {
+                dgvProductos.DataSource = _productoLOG.ObtenerProductos(true);
+
+            }
+            // Originales
+            else if (rdbActivos.Checked)
             {
                 dgvProductos.DataSource = _productoLOG.ObtenerProductos();
 
@@ -52,7 +65,7 @@ namespace CapaVista
             }
 
         }
-
+        
         ////////////////////////////////////////////////
         private void btnVolver_Click(object sender, EventArgs e)
         {
@@ -125,6 +138,93 @@ namespace CapaVista
         private void rdbInactivos_CheckedChanged(object sender, EventArgs e)
         {
             CargarProductos();
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////
+
+        private void txtFiltroCodigo_TextChanged(object sender, EventArgs e)
+        {
+            
+            if (txtFiltroCodigo.Text == "")
+            {
+                //MessageBox.Show("Ocurrio un XDDDDDDDDDD");
+                
+                CargarProductos();
+
+            }
+            else if (int.TryParse(txtFiltroCodigo.Text, out int codigo))
+            {
+                var producto = _productoLOG.ObtenerProductoPorId(codigo);
+
+                if (producto != null)
+                {
+
+                    dgvProductos.DataSource = new List<Producto> { producto };
+
+                    
+                    _productoLOG = new ProductoLOG();
+
+                }
+                else
+                {
+                    try
+                    {
+                        List<DataGridViewColumn> columnas = new List<DataGridViewColumn>();
+                        List<DataGridViewColumn> columnasEs = new List<DataGridViewColumn>();
+                        foreach (DataGridViewColumn columna in dgvProductos.Columns)
+                        {
+                            if (columna.Name != "Editar" && columna.Name != "Eliminar")
+                            {
+                                columnas.Add(columna.Clone() as DataGridViewColumn);
+                            }
+                            else
+                            {
+                                columnasEs.Add(columna.Clone() as DataGridViewColumn);
+                            }
+                        }
+
+                        dgvProductos.DataSource = null;
+                        dgvProductos.Rows.Clear();
+                        dgvProductos.Columns.Clear();
+
+                        foreach (var columna in columnas)
+                        {
+                            dgvProductos.Columns.Add(columna.Clone() as DataGridViewColumn);
+                        }
+
+                        DataGridViewColumn columnb = dgvProductos.Columns[dgvProductos.ColumnCount - 1];
+                        foreach (var columna in columnasEs)
+                        {
+
+                            dgvProductos.Columns.Add(columna.Clone() as DataGridViewColumn);
+                        }
+
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Eror de filtrado", "Tienda | Registro Productos",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtFiltroCodigo.Text = "";
+                    }
+                }
+            }
+            Editar.DisplayIndex = dgvProductos.Columns.Count - 1;
+            Eliminar.DisplayIndex = dgvProductos.Columns.Count - 1;
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////
+        private void txtFiltroCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////
+        private void txtFiltroNombre_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

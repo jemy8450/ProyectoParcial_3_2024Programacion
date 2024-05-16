@@ -222,6 +222,11 @@ namespace CapaVista
             }
         }
 
+        private void cbxProductoId_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         ////////////////////////////////////////////////////////////////////
         //private void dgvDetalleVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
         //{

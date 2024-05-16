@@ -28,20 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbxFiltro = new System.Windows.Forms.GroupBox();
+            this.txtFiltroNombre = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtFiltroCodigo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.ProductoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Existencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.gbxEstado = new System.Windows.Forms.GroupBox();
@@ -49,18 +45,66 @@
             this.rdbActivos = new System.Windows.Forms.RadioButton();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ProductoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Existencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.gbxFiltro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.gbxEstado.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxFiltro
             // 
+            this.gbxFiltro.Controls.Add(this.txtFiltroNombre);
+            this.gbxFiltro.Controls.Add(this.label2);
+            this.gbxFiltro.Controls.Add(this.txtFiltroCodigo);
+            this.gbxFiltro.Controls.Add(this.label1);
             this.gbxFiltro.Location = new System.Drawing.Point(12, 24);
             this.gbxFiltro.Name = "gbxFiltro";
             this.gbxFiltro.Size = new System.Drawing.Size(660, 100);
             this.gbxFiltro.TabIndex = 0;
             this.gbxFiltro.TabStop = false;
             this.gbxFiltro.Text = "Filtros por Producto";
+            // 
+            // txtFiltroNombre
+            // 
+            this.txtFiltroNombre.Location = new System.Drawing.Point(409, 41);
+            this.txtFiltroNombre.Name = "txtFiltroNombre";
+            this.txtFiltroNombre.Size = new System.Drawing.Size(100, 26);
+            this.txtFiltroNombre.TabIndex = 3;
+            this.txtFiltroNombre.TextChanged += new System.EventHandler(this.txtFiltroNombre_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(284, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Nombre Producto:";
+            // 
+            // txtFiltroCodigo
+            // 
+            this.txtFiltroCodigo.Location = new System.Drawing.Point(79, 44);
+            this.txtFiltroCodigo.Name = "txtFiltroCodigo";
+            this.txtFiltroCodigo.Size = new System.Drawing.Size(100, 26);
+            this.txtFiltroCodigo.TabIndex = 1;
+            this.txtFiltroCodigo.TextChanged += new System.EventHandler(this.txtFiltroCodigo_TextChanged);
+            this.txtFiltroCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFiltroCodigo_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Codigo:";
             // 
             // dgvProductos
             // 
@@ -84,85 +128,6 @@
             this.dgvProductos.Size = new System.Drawing.Size(982, 407);
             this.dgvProductos.TabIndex = 1;
             this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
-            // 
-            // ProductoId
-            // 
-            this.ProductoId.DataPropertyName = "ProductoId";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductoId.DefaultCellStyle = dataGridViewCellStyle5;
-            this.ProductoId.HeaderText = "Código";
-            this.ProductoId.MinimumWidth = 6;
-            this.ProductoId.Name = "ProductoId";
-            this.ProductoId.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre Producto";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 300;
-            // 
-            // Descripción
-            // 
-            this.Descripción.DataPropertyName = "Descripcion";
-            this.Descripción.HeaderText = "Descripción";
-            this.Descripción.MinimumWidth = 6;
-            this.Descripción.Name = "Descripción";
-            this.Descripción.ReadOnly = true;
-            this.Descripción.Visible = false;
-            this.Descripción.Width = 350;
-            // 
-            // Precio
-            // 
-            this.Precio.DataPropertyName = "PrecioUnitario";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Precio.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Precio.HeaderText = "Precio U";
-            this.Precio.MinimumWidth = 6;
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            this.Precio.Width = 125;
-            // 
-            // Existencias
-            // 
-            this.Existencias.DataPropertyName = "Existencias";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Existencias.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Existencias.HeaderText = "Existencias";
-            this.Existencias.MinimumWidth = 6;
-            this.Existencias.Name = "Existencias";
-            this.Existencias.ReadOnly = true;
-            this.Existencias.Width = 125;
-            // 
-            // Estado
-            // 
-            this.Estado.DataPropertyName = "Estado";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.Estado.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.MinimumWidth = 6;
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Visible = false;
-            this.Estado.Width = 125;
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Image = global::CapaVista.Properties.Resources.edit_v2;
-            this.Editar.Name = "Editar";
-            this.Editar.ReadOnly = true;
-            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Image = global::CapaVista.Properties.Resources.delete;
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
             // 
             // btnNuevo
             // 
@@ -232,6 +197,87 @@
             this.dataGridViewImageColumn2.Image = global::CapaVista.Properties.Resources.delete;
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             // 
+            // ProductoId
+            // 
+            this.ProductoId.DataPropertyName = "ProductoId";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductoId.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ProductoId.HeaderText = "Código";
+            this.ProductoId.MinimumWidth = 6;
+            this.ProductoId.Name = "ProductoId";
+            this.ProductoId.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Nombre Producto";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 275;
+            // 
+            // Descripción
+            // 
+            this.Descripción.DataPropertyName = "Descripcion";
+            this.Descripción.HeaderText = "Descripción";
+            this.Descripción.MinimumWidth = 6;
+            this.Descripción.Name = "Descripción";
+            this.Descripción.ReadOnly = true;
+            this.Descripción.Visible = false;
+            this.Descripción.Width = 350;
+            // 
+            // Precio
+            // 
+            this.Precio.DataPropertyName = "PrecioUnitario";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Precio.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Precio.HeaderText = "Precio U";
+            this.Precio.MinimumWidth = 6;
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            this.Precio.Width = 125;
+            // 
+            // Existencias
+            // 
+            this.Existencias.DataPropertyName = "Existencias";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Existencias.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Existencias.HeaderText = "Existencias";
+            this.Existencias.MinimumWidth = 6;
+            this.Existencias.Name = "Existencias";
+            this.Existencias.ReadOnly = true;
+            this.Existencias.Width = 125;
+            // 
+            // Estado
+            // 
+            this.Estado.DataPropertyName = "Estado";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.NullValue = false;
+            this.Estado.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.MinimumWidth = 6;
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Estado.Width = 125;
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Image = global::CapaVista.Properties.Resources.edit_v2;
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Image = global::CapaVista.Properties.Resources.delete;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            // 
             // MantenimientoProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -248,6 +294,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tienda | Mantenimiento de Productos";
             this.Load += new System.EventHandler(this.MantenimientoProductos_Load);
+            this.gbxFiltro.ResumeLayout(false);
+            this.gbxFiltro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.gbxEstado.ResumeLayout(false);
             this.gbxEstado.PerformLayout();
@@ -266,12 +314,16 @@
         private System.Windows.Forms.RadioButton rdbActivos;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.TextBox txtFiltroCodigo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtFiltroNombre;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductoId;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripción;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Existencias;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Estado;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
     }

@@ -254,6 +254,7 @@
             this.cbxProductoId.Size = new System.Drawing.Size(101, 24);
             this.cbxProductoId.TabIndex = 28;
             this.cbxProductoId.ValueMember = "ProductoId";
+            this.cbxProductoId.SelectedIndexChanged += new System.EventHandler(this.cbxProductoId_SelectedIndexChanged);
             this.cbxProductoId.TextChanged += new System.EventHandler(this.cbxProductoId_TextChanged);
             this.cbxProductoId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxProductoId_KeyPress);
             // 
