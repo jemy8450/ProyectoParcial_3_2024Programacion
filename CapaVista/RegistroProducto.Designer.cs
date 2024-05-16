@@ -151,7 +151,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnGuardar.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnGuardar.Location = new System.Drawing.Point(12, 401);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(88, 39);
@@ -164,6 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(798, 452);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);

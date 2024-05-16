@@ -32,7 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MantenimientoProductos));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbxFiltro = new System.Windows.Forms.GroupBox();
             this.txtFiltroNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,7 +65,7 @@
             // 
             // gbxFiltro
             // 
-            this.gbxFiltro.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.gbxFiltro.BackColor = System.Drawing.SystemColors.Info;
             this.gbxFiltro.Controls.Add(this.txtFiltroNombre);
             this.gbxFiltro.Controls.Add(this.label2);
             this.gbxFiltro.Controls.Add(this.txtFiltroCodigo);
@@ -155,7 +159,7 @@
             // 
             // gbxEstado
             // 
-            this.gbxEstado.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.gbxEstado.BackColor = System.Drawing.SystemColors.Info;
             this.gbxEstado.Controls.Add(this.rdbInactivos);
             this.gbxEstado.Controls.Add(this.rdbActivos);
             this.gbxEstado.Location = new System.Drawing.Point(678, 24);
@@ -212,6 +216,7 @@
             // 
             this.ProductoId.DataPropertyName = "ProductoId";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightCoral;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductoId.DefaultCellStyle = dataGridViewCellStyle1;
             this.ProductoId.HeaderText = "Código";
@@ -223,15 +228,19 @@
             // Nombre
             // 
             this.Nombre.DataPropertyName = "Nombre";
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCoral;
+            this.Nombre.DefaultCellStyle = dataGridViewCellStyle2;
             this.Nombre.HeaderText = "Nombre Producto";
             this.Nombre.MinimumWidth = 6;
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 275;
+            this.Nombre.Width = 304;
             // 
             // Descripción
             // 
             this.Descripción.DataPropertyName = "Descripcion";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightCoral;
+            this.Descripción.DefaultCellStyle = dataGridViewCellStyle3;
             this.Descripción.HeaderText = "Descripción";
             this.Descripción.MinimumWidth = 6;
             this.Descripción.Name = "Descripción";
@@ -242,8 +251,9 @@
             // Precio
             // 
             this.Precio.DataPropertyName = "PrecioUnitario";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Precio.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightCoral;
+            this.Precio.DefaultCellStyle = dataGridViewCellStyle4;
             this.Precio.HeaderText = "Precio Unitario";
             this.Precio.MinimumWidth = 6;
             this.Precio.Name = "Precio";
@@ -253,8 +263,9 @@
             // Existencias
             // 
             this.Existencias.DataPropertyName = "Existencias";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Existencias.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightCoral;
+            this.Existencias.DefaultCellStyle = dataGridViewCellStyle5;
             this.Existencias.HeaderText = "Existencias";
             this.Existencias.MinimumWidth = 6;
             this.Existencias.Name = "Existencias";
@@ -264,9 +275,10 @@
             // Estado
             // 
             this.Estado.DataPropertyName = "Estado";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.NullValue = false;
-            this.Estado.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightCoral;
+            dataGridViewCellStyle6.NullValue = false;
+            this.Estado.DefaultCellStyle = dataGridViewCellStyle6;
             this.Estado.HeaderText = "Estado";
             this.Estado.MinimumWidth = 6;
             this.Estado.Name = "Estado";
@@ -278,6 +290,10 @@
             // 
             // Editar
             // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightCoral;
+            dataGridViewCellStyle7.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle7.NullValue")));
+            this.Editar.DefaultCellStyle = dataGridViewCellStyle7;
             this.Editar.HeaderText = "Editar";
             this.Editar.Image = global::CapaVista.Properties.Resources.editar__1_;
             this.Editar.MinimumWidth = 6;
@@ -288,6 +304,10 @@
             // 
             // Eliminar
             // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.LightCoral;
+            dataGridViewCellStyle8.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle8.NullValue")));
+            this.Eliminar.DefaultCellStyle = dataGridViewCellStyle8;
             this.Eliminar.HeaderText = "Eliminar";
             this.Eliminar.Image = global::CapaVista.Properties.Resources.eliminar__1_;
             this.Eliminar.MinimumWidth = 6;
@@ -299,6 +319,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1006, 673);
             this.Controls.Add(this.gbxEstado);
             this.Controls.Add(this.btnVolver);

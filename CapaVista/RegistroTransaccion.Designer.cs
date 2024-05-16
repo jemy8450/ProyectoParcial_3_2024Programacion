@@ -34,6 +34,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroTransaccion));
             this.dgvTransacciones = new System.Windows.Forms.DataGridView();
             this.detallesDeVentaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -43,6 +45,7 @@
             this.ProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.detallesDeVentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.detallesDeVentaIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventaIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,7 +53,6 @@
             this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransacciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallesDeVentaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DetalleVentaBindingSource)).BeginInit();
@@ -64,6 +66,7 @@
             this.dgvTransacciones.AllowUserToAddRows = false;
             this.dgvTransacciones.AllowUserToDeleteRows = false;
             this.dgvTransacciones.AutoGenerateColumns = false;
+            this.dgvTransacciones.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvTransacciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTransacciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.detallesDeVentaIdDataGridViewTextBoxColumn,
@@ -92,6 +95,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(39, 23);
             this.label1.Name = "label1";
@@ -114,18 +118,28 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(697, 380);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 39);
             this.button1.TabIndex = 2;
             this.button1.Text = "Volver";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(15, 13);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(348, 54);
+            this.textBox1.TabIndex = 3;
             // 
             // detallesDeVentaIdDataGridViewTextBoxColumn
             // 
             this.detallesDeVentaIdDataGridViewTextBoxColumn.DataPropertyName = "DetallesDeVentaId";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightCyan;
             this.detallesDeVentaIdDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             this.detallesDeVentaIdDataGridViewTextBoxColumn.HeaderText = "Codigo Registro";
             this.detallesDeVentaIdDataGridViewTextBoxColumn.MinimumWidth = 6;
@@ -137,6 +151,7 @@
             // 
             this.ventaIdDataGridViewTextBoxColumn.DataPropertyName = "VentaId";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCyan;
             this.ventaIdDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.ventaIdDataGridViewTextBoxColumn.HeaderText = "Codigo Venta";
             this.ventaIdDataGridViewTextBoxColumn.MinimumWidth = 6;
@@ -148,6 +163,7 @@
             // 
             this.productoIdDataGridViewTextBoxColumn.DataPropertyName = "ProductoId";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightCyan;
             this.productoIdDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
             this.productoIdDataGridViewTextBoxColumn.HeaderText = "Codigo Producto";
             this.productoIdDataGridViewTextBoxColumn.MinimumWidth = 6;
@@ -159,6 +175,7 @@
             // 
             this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightCyan;
             this.cantidadDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
             this.cantidadDataGridViewTextBoxColumn.MinimumWidth = 6;
@@ -170,6 +187,7 @@
             // 
             this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightCyan;
             this.precioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
             this.precioDataGridViewTextBoxColumn.MinimumWidth = 6;
@@ -180,6 +198,8 @@
             // productoDataGridViewTextBoxColumn
             // 
             this.productoDataGridViewTextBoxColumn.DataPropertyName = "Producto";
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightCyan;
+            this.productoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.productoDataGridViewTextBoxColumn.HeaderText = "Producto";
             this.productoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.productoDataGridViewTextBoxColumn.Name = "productoDataGridViewTextBoxColumn";
@@ -190,6 +210,8 @@
             // ventaDataGridViewTextBoxColumn
             // 
             this.ventaDataGridViewTextBoxColumn.DataPropertyName = "Venta";
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightCyan;
+            this.ventaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.ventaDataGridViewTextBoxColumn.HeaderText = "Venta";
             this.ventaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ventaDataGridViewTextBoxColumn.Name = "ventaDataGridViewTextBoxColumn";
@@ -197,18 +219,11 @@
             this.ventaDataGridViewTextBoxColumn.Visible = false;
             this.ventaDataGridViewTextBoxColumn.Width = 125;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(15, 13);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(348, 54);
-            this.textBox1.TabIndex = 3;
-            // 
             // RegistroTransaccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 431);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -241,6 +256,7 @@
         private System.Windows.Forms.BindingSource detallesDeVentaBindingSource;
         private System.Windows.Forms.BindingSource detallesDeVentaBindingSource1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn detallesDeVentaIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ventaIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productoIdDataGridViewTextBoxColumn;
@@ -248,6 +264,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ventaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -165,7 +165,7 @@ namespace CapaVista
                     bool precioValido = decimal.TryParse(dgvDetalleVenta.Rows[e.RowIndex].Cells["Precio"].Value.ToString(), out decimal precio);
                     int cantidad = int.Parse(dgvDetalleVenta.Rows[e.RowIndex].Cells["Cantidad"].Value.ToString());
 
-                    if (precioValido && cantidad > 0)
+                    if (precioValido && cantidad >= 0)
                     {
                         decimal Subtotal = precio * cantidad;
                         dgvDetalleVenta.Rows[e.RowIndex].Cells["SubTotal"].Value = Subtotal;
@@ -179,10 +179,10 @@ namespace CapaVista
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                MessageBox.Show("Ocurrio un error", "UNAB|Chalatenango",
+                MessageBox.Show($"Ocurrio un errorfeo {ex}", "UNAB|Chalatenango",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
