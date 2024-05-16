@@ -96,7 +96,7 @@ namespace CapaVista
             }
             catch (Exception)
             {
-                MessageBox.Show("Ocurrio un error", "UNAB|Chalatenango",
+                MessageBox.Show("Ocurrio un error", "Tienda | Registro Venta",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -130,21 +130,21 @@ namespace CapaVista
 
                 if (resultado > 0)
                 {
-                    MessageBox.Show("Venta Guardada con éxito", "Tienda | Registro venta",
+                    MessageBox.Show("Venta Guardada con éxito", "Tienda | Registro Venta",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     detalleVenta.Rows.Clear();
                     CargarProductos();
                 }
                 else
                 {
-                    MessageBox.Show("No se logro guardar la venta", "Tienda | Registro venta",
+                    MessageBox.Show("No se logro guardar la venta", "Tienda | Registro Venta",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)
             {
 
-                MessageBox.Show("Ocurrio un error", "UNAB|Chalatenango",
+                MessageBox.Show("Ocurrio un error", "Tienda | Registro Venta",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -174,15 +174,15 @@ namespace CapaVista
                     }
                     else
                     {
-                        MessageBox.Show("Debe ingresar un precio válido", "UNAB|Chalatenango",
+                        MessageBox.Show("Debe ingresar un precio válido", "Tienda | Registro Producto",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                MessageBox.Show($"Ocurrio un errorfeo {ex}", "UNAB|Chalatenango",
+                MessageBox.Show($"Ocurrio un error", "Tienda | Registro Producto",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -226,59 +226,6 @@ namespace CapaVista
         {
 
         }
-
-        ////////////////////////////////////////////////////////////////////
-        //private void dgvDetalleVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    try
-        //    {
-        //        if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-        //        {
-        //            int id = int.Parse(dgvDetalleVenta.Rows[e.RowIndex].Cells["Codigo"].Value.ToString());
-
-        //            if (dgvDetalleVenta.Columns[e.ColumnIndex].Name.Equals("Eliminar"))
-        //            {
-        //                var dialogo = MessageBox.Show("¿Esta seguro que desea eliminar el producto?", "Tienda | Eliminar Producto",
-        //                MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-        //                if (dialogo != DialogResult.Yes)
-        //                {
-        //                    MessageBox.Show("Operacion cancelada", "Tienda | Eliminar Producto",
-        //                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //                    return;
-        //                }
-        //                else
-        //                {///
-        //                    _ventaLOG = new VentaLOG();
-
-        //                    detalleVenta.Rows.Add(codigo, producto.Nombre, producto.Precio,
-        //                cantidad, (cantidad * producto.Precio));
-
-        //                    dgvDetalleVenta.DataSource = detalleVenta;
-
-        //                    if (resultado > 0)
-        //                    {
-        //                        MessageBox.Show("Producto eliminado con exito", "Tienda | Eliminar Producto",
-        //                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-        //                        CargarProductos();
-        //                    }
-        //                    else
-        //                    {
-        //                        MessageBox.Show("No se logro eliminar el producto", "Tienda | Eliminar Producto",
-        //                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //                    }
-        //                }
-        //            }
-        //        }
-        //    }
-        //    catch (Exception)
-        //    {
-        //        MessageBox.Show("Ocurrio un error", "UNAB|Chalatenango",
-        //            MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //}
-
-        ////////////////////////////////////////////////////////////////////
+       
     }
 }

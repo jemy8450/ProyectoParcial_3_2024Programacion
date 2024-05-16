@@ -100,8 +100,8 @@ namespace CapaVista
                 {
                     MessageBox.Show("Se requiere agregar existencias del producto", "Tienda | Registro Productos",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    //txtExistencias.Focus();
-                    //txtExistencias.BackColor = Color.LightCyan;
+                    txtExistencias.Focus();
+                    txtExistencias.BackColor = Color.LightCyan;
                     return;
                 }
 
@@ -177,10 +177,7 @@ namespace CapaVista
 
         private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            
         }
 
         private void txtExistencias_KeyPress(object sender, KeyPressEventArgs e)

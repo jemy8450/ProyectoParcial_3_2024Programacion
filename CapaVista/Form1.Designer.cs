@@ -69,7 +69,7 @@
             // MnRegistroVentas
             // 
             this.MnRegistroVentas.Name = "MnRegistroVentas";
-            this.MnRegistroVentas.Size = new System.Drawing.Size(212, 28);
+            this.MnRegistroVentas.Size = new System.Drawing.Size(253, 32);
             this.MnRegistroVentas.Text = "Registro de Ventas";
             this.MnRegistroVentas.Click += new System.EventHandler(this.MnRegistroVentas_Click);
             // 
@@ -78,13 +78,13 @@
             this.productosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MnMantenimientoProductos});
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(92, 27);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(108, 31);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // MnMantenimientoProductos
             // 
             this.MnMantenimientoProductos.Name = "MnMantenimientoProductos";
-            this.MnMantenimientoProductos.Size = new System.Drawing.Size(277, 28);
+            this.MnMantenimientoProductos.Size = new System.Drawing.Size(331, 32);
             this.MnMantenimientoProductos.Text = "Mantenimiento de Productos";
             this.MnMantenimientoProductos.Click += new System.EventHandler(this.MnMantenimientoProductos_Click);
             // 
@@ -93,13 +93,13 @@
             this.registrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MnRegistroTransacciones});
             this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
-            this.registrosToolStripMenuItem.Size = new System.Drawing.Size(87, 27);
+            this.registrosToolStripMenuItem.Size = new System.Drawing.Size(103, 31);
             this.registrosToolStripMenuItem.Text = "Registros";
             // 
             // MnRegistroTransacciones
             // 
             this.MnRegistroTransacciones.Name = "MnRegistroTransacciones";
-            this.MnRegistroTransacciones.Size = new System.Drawing.Size(266, 28);
+            this.MnRegistroTransacciones.Size = new System.Drawing.Size(314, 32);
             this.MnRegistroTransacciones.Text = "Registro de Transacciones";
             this.MnRegistroTransacciones.Click += new System.EventHandler(this.MnRegistroTransacciones_Click);
             // 
@@ -116,16 +116,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bauhaus 93", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(74, 33);
+            this.label1.Font = new System.Drawing.Font("Bauhaus 93", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(232, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(860, 73);
+            this.label1.Size = new System.Drawing.Size(631, 53);
             this.label1.TabIndex = 2;
             this.label1.Text = "Bienvenido a Happy Soft Feet";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1006, 673);
             this.Controls.Add(this.label1);
