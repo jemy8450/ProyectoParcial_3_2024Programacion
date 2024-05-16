@@ -41,6 +41,11 @@
             this.ventaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.dgvDetalleVenta = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtExistencias = new System.Windows.Forms.TextBox();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -54,11 +59,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtPrecioUnitario = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ventaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
@@ -123,130 +123,6 @@
             this.dgvDetalleVenta.TabIndex = 23;
             this.dgvDetalleVenta.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleVenta_CellValueChanged);
             // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(699, 93);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(83, 39);
-            this.btnAgregar.TabIndex = 22;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // txtExistencias
-            // 
-            this.txtExistencias.BackColor = System.Drawing.SystemColors.Window;
-            this.txtExistencias.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Existencias", true));
-            this.txtExistencias.Location = new System.Drawing.Point(467, 71);
-            this.txtExistencias.Name = "txtExistencias";
-            this.txtExistencias.ReadOnly = true;
-            this.txtExistencias.Size = new System.Drawing.Size(100, 22);
-            this.txtExistencias.TabIndex = 21;
-            // 
-            // productoBindingSource
-            // 
-            this.productoBindingSource.DataSource = typeof(CapaEntidades.Producto);
-            // 
-            // cbxNombreProducto
-            // 
-            this.cbxNombreProducto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbxNombreProducto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbxNombreProducto.DataSource = this.productoBindingSource;
-            this.cbxNombreProducto.DisplayMember = "Nombre";
-            this.cbxNombreProducto.FormattingEnabled = true;
-            this.cbxNombreProducto.Location = new System.Drawing.Point(467, 33);
-            this.cbxNombreProducto.Name = "cbxNombreProducto";
-            this.cbxNombreProducto.Size = new System.Drawing.Size(315, 24);
-            this.cbxNombreProducto.TabIndex = 20;
-            this.cbxNombreProducto.ValueMember = "ProductoId";
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.Location = new System.Drawing.Point(186, 71);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(100, 22);
-            this.txtCantidad.TabIndex = 19;
-            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(365, 74);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 16);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Existencias:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(101, 74);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 16);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Cantidad:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(319, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 16);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Nombre Producto:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 16);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Codigo Producto:";
-            // 
-            // cbxProductoId
-            // 
-            this.cbxProductoId.DataSource = this.productoBindingSource;
-            this.cbxProductoId.DisplayMember = "ProductoId";
-            this.cbxProductoId.FormattingEnabled = true;
-            this.cbxProductoId.Location = new System.Drawing.Point(185, 33);
-            this.cbxProductoId.Name = "cbxProductoId";
-            this.cbxProductoId.Size = new System.Drawing.Size(101, 24);
-            this.cbxProductoId.TabIndex = 28;
-            this.cbxProductoId.ValueMember = "ProductoId";
-            this.cbxProductoId.SelectedIndexChanged += new System.EventHandler(this.cbxProductoId_SelectedIndexChanged);
-            this.cbxProductoId.TextChanged += new System.EventHandler(this.cbxProductoId_TextChanged);
-            this.cbxProductoId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxProductoId_KeyPress);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(399, 109);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 16);
-            this.label6.TabIndex = 29;
-            this.label6.Text = "Precio:";
-            // 
-            // txtPrecioUnitario
-            // 
-            this.txtPrecioUnitario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtPrecioUnitario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "PrecioUnitario", true));
-            this.txtPrecioUnitario.Location = new System.Drawing.Point(467, 106);
-            this.txtPrecioUnitario.Name = "txtPrecioUnitario";
-            this.txtPrecioUnitario.ReadOnly = true;
-            this.txtPrecioUnitario.Size = new System.Drawing.Size(100, 22);
-            this.txtPrecioUnitario.TabIndex = 30;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(21, 113);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 25);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "Carrito:";
-            // 
             // Codigo
             // 
             this.Codigo.DataPropertyName = "Codigo";
@@ -299,6 +175,130 @@
             this.SubTotal.MinimumWidth = 6;
             this.SubTotal.Name = "SubTotal";
             this.SubTotal.ReadOnly = true;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(699, 93);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(83, 39);
+            this.btnAgregar.TabIndex = 22;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // txtExistencias
+            // 
+            this.txtExistencias.BackColor = System.Drawing.SystemColors.Window;
+            this.txtExistencias.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Existencias", true));
+            this.txtExistencias.Location = new System.Drawing.Point(467, 71);
+            this.txtExistencias.Name = "txtExistencias";
+            this.txtExistencias.ReadOnly = true;
+            this.txtExistencias.Size = new System.Drawing.Size(100, 22);
+            this.txtExistencias.TabIndex = 21;
+            // 
+            // productoBindingSource
+            // 
+            this.productoBindingSource.DataSource = typeof(CapaEntidades.Producto);
+            // 
+            // cbxNombreProducto
+            // 
+            this.cbxNombreProducto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbxNombreProducto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbxNombreProducto.DataSource = this.productoBindingSource;
+            this.cbxNombreProducto.DisplayMember = "Nombre";
+            this.cbxNombreProducto.FormattingEnabled = true;
+            this.cbxNombreProducto.Location = new System.Drawing.Point(467, 33);
+            this.cbxNombreProducto.Name = "cbxNombreProducto";
+            this.cbxNombreProducto.Size = new System.Drawing.Size(315, 24);
+            this.cbxNombreProducto.TabIndex = 20;
+            this.cbxNombreProducto.ValueMember = "ProductoId";
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(186, 71);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(100, 22);
+            this.txtCantidad.TabIndex = 19;
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(382, 74);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 16);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Existencias:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(117, 74);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 16);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Cantidad:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(349, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 16);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Nombre Producto:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(72, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 16);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Codigo Producto:";
+            // 
+            // cbxProductoId
+            // 
+            this.cbxProductoId.DataSource = this.productoBindingSource;
+            this.cbxProductoId.DisplayMember = "ProductoId";
+            this.cbxProductoId.FormattingEnabled = true;
+            this.cbxProductoId.Location = new System.Drawing.Point(185, 33);
+            this.cbxProductoId.Name = "cbxProductoId";
+            this.cbxProductoId.Size = new System.Drawing.Size(101, 24);
+            this.cbxProductoId.TabIndex = 28;
+            this.cbxProductoId.ValueMember = "ProductoId";
+            this.cbxProductoId.SelectedIndexChanged += new System.EventHandler(this.cbxProductoId_SelectedIndexChanged);
+            this.cbxProductoId.TextChanged += new System.EventHandler(this.cbxProductoId_TextChanged);
+            this.cbxProductoId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbxProductoId_KeyPress);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(413, 109);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(48, 16);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Precio:";
+            // 
+            // txtPrecioUnitario
+            // 
+            this.txtPrecioUnitario.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtPrecioUnitario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "PrecioUnitario", true));
+            this.txtPrecioUnitario.Location = new System.Drawing.Point(467, 106);
+            this.txtPrecioUnitario.Name = "txtPrecioUnitario";
+            this.txtPrecioUnitario.ReadOnly = true;
+            this.txtPrecioUnitario.Size = new System.Drawing.Size(100, 22);
+            this.txtPrecioUnitario.TabIndex = 30;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(21, 113);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(84, 25);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Carrito:";
             // 
             // RegistroVenta
             // 

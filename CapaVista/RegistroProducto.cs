@@ -175,7 +175,23 @@ namespace CapaVista
 
         }
 
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtExistencias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
         ////////////////////////////////////////////////////////////////////////////////////////////////
-        
+
     }
 }

@@ -41,19 +41,7 @@ namespace CapaVista
         {
             _productoLOG = new ProductoLOG();
 
-            // Cambios
-            if (rdbActivos.Checked && txtFiltroCodigo.Text != "")
-            {
-                dgvProductos.DataSource = _productoLOG.ObtenerProductos();
-
-            }
-            else if (rdbInactivos.Checked && txtFiltroCodigo.Text != "")
-            {
-                dgvProductos.DataSource = _productoLOG.ObtenerProductos(true);
-
-            }
-            // Originales
-            else if (rdbActivos.Checked)
+            if (rdbActivos.Checked)
             {
                 dgvProductos.DataSource = _productoLOG.ObtenerProductos();
 
@@ -256,7 +244,8 @@ namespace CapaVista
         {
             if (txtFiltroNombre.Text == "Hola")
             {
-                MessageBox.Show("Desbloqueaste un enigma :)");
+                MessageBox.Show("Desbloqueaste un enigma :)", "Enigmatico | elEnemigos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
             if (char.IsLetter(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsSeparator(e.KeyChar))
             {

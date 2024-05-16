@@ -113,6 +113,7 @@
             this.txtExistencias.Name = "txtExistencias";
             this.txtExistencias.Size = new System.Drawing.Size(190, 26);
             this.txtExistencias.TabIndex = 13;
+            this.txtExistencias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExistencias_KeyPress);
             // 
             // txtPrecio
             // 
@@ -121,6 +122,7 @@
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(190, 26);
             this.txtPrecio.TabIndex = 12;
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
             // 
             // txtDescripción
             // 
