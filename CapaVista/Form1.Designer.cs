@@ -54,7 +54,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1006, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1006, 37);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -63,7 +63,7 @@
             this.ventasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MnRegistroVentas});
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(71, 27);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(83, 31);
             this.ventasToolStripMenuItem.Text = "Ventas";
             // 
             // MnRegistroVentas
