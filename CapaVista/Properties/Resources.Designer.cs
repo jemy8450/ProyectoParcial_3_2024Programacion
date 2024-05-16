@@ -63,6 +63,16 @@ namespace CapaVista.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap astapollo {
+            get {
+                object obj = ResourceManager.GetObject("astapollo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete {
             get {
                 object obj = ResourceManager.GetObject("delete", resourceCulture);
@@ -76,6 +86,37 @@ namespace CapaVista.Properties {
         internal static System.Drawing.Bitmap edit_v2 {
             get {
                 object obj = ResourceManager.GetObject("edit_v2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap editar__1_ {
+            get {
+                object obj = ResourceManager.GetObject("editar (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eliminar__1_ {
+            get {
+                object obj = ResourceManager.GetObject("eliminar (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shoe_store_with_new_collection_men_or_women_various_models_or_colors_of_sneakers_and_high_heels_in_flat_cartoon_hand_drawn_templates_illustration_vector {
+            get {
+                object obj = ResourceManager.GetObject("shoe-store-with-new-collection-men-or-women-various-models-or-colors-of-sneakers-" +
+                        "and-high-heels-in-flat-cartoon-hand-drawn-templates-illustration-vector", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

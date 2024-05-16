@@ -29,5 +29,10 @@ namespace CapaVista
             dgvTransacciones.DataSource = _transaccionLOG.ObtenerProductos();
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
