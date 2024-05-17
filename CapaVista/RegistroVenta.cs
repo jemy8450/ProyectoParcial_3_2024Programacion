@@ -226,6 +226,10 @@ namespace CapaVista
         {
 
         }
-       
+
+        private void txtMonto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+        }
     }
 }
